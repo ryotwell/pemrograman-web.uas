@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit <?= htmlspecialchars($student->name) ?></title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Edit <?= e($student->name) ?></title>
+    <link rel="stylesheet" href="/css/app.css">
 </head>
 <body class="bg-gradient-to-r from-blue-50 to-indigo-50">
     <nav class="bg-white shadow-lg">
@@ -32,50 +32,50 @@
 
     <div class="max-w-7xl mx-auto px-4 py-6">
         <div class="flex justify-between items-center mb-6">
-            <h1 class="text-3xl font-bold text-gray-900">Edit <?= htmlspecialchars($student->name) ?></h1>
+            <h1 class="text-3xl font-bold text-gray-900">Edit <?= e($student->name) ?></h1>
         </div>
         <div class="bg-white shadow-lg rounded-xl p-6">
-            <form action="/students/<?= htmlspecialchars($student->id) ?>/edit" method="POST" class="space-y-6">
+            <form action="/students/<?= e($student->id) ?>/edit" method="POST" class="space-y-6">
                 <!-- name -->
                 <div>
                     <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                    <input type="text" name="name" id="name" value="<?= htmlspecialchars($student->name) ?>" class="mt-2 block w-full px-4 py-3 border border-blue-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
+                    <input type="text" name="name" id="name" value="<?= e($student->name) ?>" class="mt-2 block w-full px-4 py-3 border border-blue-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
                 </div>
 
                 <!-- email -->
                 <div>
                     <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" name="email" id="email" value="<?= htmlspecialchars($student->email) ?>" class="mt-2 block w-full px-4 py-3 border border-blue-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
+                    <input type="email" name="email" id="email" value="<?= e($student->email) ?>" class="mt-2 block w-full px-4 py-3 border border-blue-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
                 </div>
 
                 <!-- phone_number -->
                 <div>
                     <label for="phone_number" class="block text-sm font-medium text-gray-700">Phone Number</label>
-                    <input type="text" name="phone_number" id="phone_number" value="<?= htmlspecialchars($student->phone_number) ?>" class="mt-2 block w-full px-4 py-3 border border-blue-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
+                    <input type="text" name="phone_number" id="phone_number" value="<?= e($student->phone_number) ?>" class="mt-2 block w-full px-4 py-3 border border-blue-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
                 </div>
 
                 <!-- address -->
                 <div>
                     <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
-                    <input type="text" name="address" id="address" value="<?= htmlspecialchars($student->address) ?>" class="mt-2 block w-full px-4 py-3 border border-blue-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
+                    <input type="text" name="address" id="address" value="<?= e($student->address) ?>" class="mt-2 block w-full px-4 py-3 border border-blue-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
                 </div>
 
                 <!-- date of birth -->
                 <div>
                     <label for="date_of_birth" class="block text-sm font-medium text-gray-700">Date of Birth</label>
-                    <input type="date" name="date_of_birth" id="date_of_birth" value="<?= htmlspecialchars($student->date_of_birth) ?>" class="mt-2 block w-full px-4 py-3 border border-blue-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
+                    <input type="date" name="date_of_birth" id="date_of_birth" value="<?= e($student->date_of_birth) ?>" class="mt-2 block w-full px-4 py-3 border border-blue-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
                 </div>
 
                 <!-- tahun angkatan -->
                 <div>
                     <label for="tahun_angkatan" class="block text-sm font-medium text-gray-700">Tahun Angkatan</label>
-                    <input type="text" name="tahun_angkatan" id="tahun_angkatan" value="<?= htmlspecialchars($student->tahun_angkatan) ?>" class="mt-2 block w-full px-4 py-3 border border-blue-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
+                    <input type="text" name="tahun_angkatan" id="tahun_angkatan" value="<?= e($student->tahun_angkatan) ?>" class="mt-2 block w-full px-4 py-3 border border-blue-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
                 </div>
 
                 <!-- semester -->
                 <div>
                     <label for="semester" class="block text-sm font-medium text-gray-700">Semester</label>
-                    <input type="number" name="semester" id="semester" min="1" max="16" value="<?= htmlspecialchars($student->semester) ?>" class="mt-2 block w-full px-4 py-3 border border-blue-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
+                    <input type="number" name="semester" id="semester" min="1" max="16" value="<?= e($student->semester) ?>" class="mt-2 block w-full px-4 py-3 border border-blue-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
                 </div>
 
                 <!-- major_id -->
@@ -83,8 +83,8 @@
                     <label for="major_id" class="block text-sm font-medium text-gray-700">Jurusan</label>
                     <select name="major_id" id="major_id" class="mt-2 block w-full px-4 py-3 border border-blue-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
                         <?php foreach ($majors as $major): ?>
-                            <option value="<?= htmlspecialchars($major->id) ?>" <?= $major->id === $student->major_id ? 'selected' : '' ?>>
-                                <?= htmlspecialchars($major->name) ?>
+                            <option value="<?= e($major->id) ?>" <?= $major->id === $student->major_id ? 'selected' : '' ?>>
+                                <?= e($major->name) ?>
                             </option>
                         <?php endforeach; ?>
                     </select>

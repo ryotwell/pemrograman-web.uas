@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Your App</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Login | <?= e($_ENV['APP_NAME']) ?></title>
+    <link rel="stylesheet" href="/css/app.css">
 </head>
 <body class="bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen flex items-center justify-center">
     <div class="bg-white p-10 rounded-xl shadow-2xl max-w-md w-full mx-4">

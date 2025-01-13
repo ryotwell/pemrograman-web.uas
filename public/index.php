@@ -1,6 +1,6 @@
 <?php
 
-require '../vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 use Slim\Factory\AppFactory;
 use Illuminate\Database\Capsule\Manager as Capsule;
@@ -8,16 +8,13 @@ use Dotenv\Dotenv;
 
 session_start();
 
-// Load .env
 $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
 $dotenv->load();
 
-// Slim App
 $app = AppFactory::create();
 $app->addRoutingMiddleware();
 $app->addErrorMiddleware(true, true, true);
 
-// Setup Illuminate Database
 $capsule = new Capsule;
 $capsule->addConnection([
     'driver'    => 'mysql',
@@ -32,7 +29,6 @@ $capsule->addConnection([
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
 
-// Include routes
-require '../app/routes.php';
+require_once '../app/routes.php';
 
 $app->run();

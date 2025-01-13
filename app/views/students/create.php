@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Data Student</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/app.css">
 </head>
 <body class="bg-gradient-to-r from-blue-50 to-indigo-50">
     <nav class="bg-white shadow-lg">
@@ -84,8 +84,8 @@
                     <select name="major_id" id="major_id" class="mt-2 block w-full px-4 py-3 border border-blue-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
                         <option value="">-- Pilih Jurusan --</option>
                         <?php foreach ($majors as $major): ?>
-                            <option value="<?= htmlspecialchars($major->id) ?>">
-                                <?= htmlspecialchars($major->name) ?>
+                            <option value="<?= e($major->id) ?>">
+                                <?= e($major->name) ?>
                             </option>
                         <?php endforeach; ?>
                     </select>
