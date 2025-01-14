@@ -8,6 +8,10 @@ use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request; 
 use App\Models\User;
 
+$app->get('/', function (Request $request, Response $response) {
+    return redirect($response, '/login');
+});
+
 // Dashboard routes
 $app->get('/dashboard', function (Request $request, Response $response) {
     $data = [
