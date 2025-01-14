@@ -13,7 +13,7 @@
                 Register
             </h2>
             <p class="text-blue-600/80 mt-3">
-                Create an account to continue
+                <?= e('Create an account to continue') ?>
             </p>
         </div>
         
@@ -52,7 +52,9 @@
         
         <p class="mt-8 text-center text-sm text-blue-600/80">
             Already have an account?
-            <a href="/login" class="font-semibold text-blue-600 hover:text-blue-800 transition duration-200">Sign in</a>
+            <a href="/login" class="font-semibold text-blue-600 hover:text-blue-800 transition duration-200">
+                Sign in
+            </a>
         </p>
     </div>
 </body>

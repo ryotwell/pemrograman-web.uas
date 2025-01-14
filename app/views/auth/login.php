@@ -10,7 +10,7 @@
     <div class="bg-white p-10 rounded-xl shadow-2xl max-w-md w-full mx-4">
         <div class="text-center mb-10">
             <h2 class="text-4xl font-bold text-blue-900">Welcome Back</h2>
-            <p class="text-blue-600/80 mt-3">Please sign in to your account</p>
+            <p class="text-blue-600/80 mt-3"><?= e('Please sign in to your account') ?></p>
         </div>
         
         <form method="POST" class="space-y-6">
@@ -42,7 +42,9 @@
         
         <p class="mt-8 text-center text-sm text-blue-600/80">
             Don't have an account? 
-            <a href="/register" class="font-semibold text-blue-600 hover:text-blue-800 transition duration-200">Sign up</a>
+            <a href="/register" class="font-semibold text-blue-600 hover:text-blue-800 transition duration-200">
+                Sign up
+            </a>
         </p>
     </div>
 </body>

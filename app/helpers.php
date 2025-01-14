@@ -187,3 +187,8 @@ function exportToWord($students) {
     $writer->save('php://output');
     exit;
 }
+
+function component($name, $data = []) {
+    extract($data);
+    require_once __DIR__ . '/views/components/' . $name . '.php';
+}
