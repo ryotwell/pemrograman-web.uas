@@ -22,5 +22,8 @@
             "app/helpers.php",
             "app/migration.php"
         ]
+    },
+    "require-dev": {
+        "filp/whoops": "^2.16"
     }
 }

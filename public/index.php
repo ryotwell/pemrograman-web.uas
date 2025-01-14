@@ -5,8 +5,13 @@ require_once '../app/bootstrap.php';
 use Slim\Factory\AppFactory;
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Dotenv\Dotenv;
+use Whoops\Handler\PrettyPageHandler;
 
 session_start();
+
+$whoops = new \Whoops\Run;
+$whoops->pushHandler(new PrettyPageHandler);
+$whoops->register();
 
 $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
 $dotenv->load();
