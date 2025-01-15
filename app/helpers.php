@@ -7,7 +7,7 @@ use App\Models\User;
 function renderView(Response $response, string $view, array $data = []): Response {
     extract($data);
     ob_start();
-    include __DIR__ . '/views/' . $view;
+    require_once __DIR__ . '/views/' . $view;
     $contents = ob_get_clean();
     $response->getBody()->write($contents);
     return $response;
