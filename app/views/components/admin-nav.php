@@ -2,7 +2,7 @@
     <div class="max-w-7xl mx-auto px-4">
         <div class="flex justify-between items-center h-16">
             <div class="flex">
-                <a href="#" class="text-xl font-bold text-indigo-600 hover:text-indigo-800 transition duration-300">
+                <a href="/" class="text-xl font-bold text-indigo-600 hover:text-indigo-800 transition duration-300">
                     <?= e($_ENV['APP_NAME']) ?>
                 </a>
             </div>
