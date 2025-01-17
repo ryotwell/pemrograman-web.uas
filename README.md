@@ -52,6 +52,7 @@ http://localhost:8000
 
 ## Project Structure
 
+```bash
 pemrograman-web.uas/
 ├── app/
 │   ├── css/
@@ -62,6 +63,7 @@ pemrograman-web.uas/
 ├── public/
 │   ├── css/
 │   └── index.php
+```bash
 
 ## License
 
