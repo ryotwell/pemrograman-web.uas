@@ -52,7 +52,7 @@ http://localhost:8000
 
 ## Requirements
 
-- PHP 7.4 or higher
+- PHP 8.3 or higher
 - MySQL 5.7 or higher
 - Web browser (Chrome, Firefox, Safari)
 
