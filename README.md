@@ -63,7 +63,7 @@ pemrograman-web.uas/
 ├── public/
 │   ├── css/
 │   └── index.php
-```bash
+```
 
 ## License
 
