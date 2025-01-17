@@ -14,6 +14,12 @@ A web application built using PHP that showcases fundamental "Pemrograman Web" c
 - Responsive design
 - Export to PDF, Excel, and WORD
 
+## Screenshots
+
+![Login Page](screenshots/sign-in.png)
+![Register Page](screenshots/sign-up.png)
+![Dashboard](screenshots/dashboard.png)
+
 ## Team Members
 
 1. ZULZARIO ZAERI - 220602030
